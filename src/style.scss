@@ -1,0 +1,66 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// Product List Header
+.invizo-woo-products-sort-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+
+	.invizo-woo-products-sort-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+}
+
+// Product List Body
+ul.products.invizo-lists {
+	display: grid;
+	list-style: none;
+	padding: 0;
+	max-width: 1170px;
+	margin: 0 auto;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+	margin-top: 40px;
+
+	&.invizo-column-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&.invizo-column-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&.invizo-column-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	li {
+		border: 1px solid #ddd;
+		padding: 10px 10px 15px;
+		border-radius: 6px;
+		transition: all 0.3s;
+
+		img {
+			border-radius: 6px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			width: 100%;
+		}
+
+		&:hover {
+			border-color: #2271b1;
+		}
+
+		.invizo-price {
+			margin: -16px 0 10px;
+		}
+	}
+}
