@@ -212,8 +212,8 @@ __webpack_require__.r(__webpack_exports__);
         per_page: numProducts,
         // orderby: sortType === "price" ? "meta_value_num" : "title",
         // orderby: sortType === "price" ? "price" : "title",
-        orderby: "_regular_price",
-        // orderby: "price",
+        // orderby: "_regular_price",
+        orderby: "title",
         // meta_key: "_price",
         order: sortOrder,
         items_per_row: itemsPerRow,
@@ -242,10 +242,10 @@ __webpack_require__.r(__webpack_exports__);
     }
     const options = [{
       value: "asc",
-      label: "Low to high"
+      label: "ASC"
     }, {
       value: "desc",
-      label: "High to low"
+      label: "DESC"
     }];
     const perRowOptions = [{
       value: "1",

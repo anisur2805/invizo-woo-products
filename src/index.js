@@ -44,8 +44,8 @@ registerBlockType("invizo-woo-products/products", {
 				per_page: numProducts,
 				// orderby: sortType === "price" ? "meta_value_num" : "title",
 				// orderby: sortType === "price" ? "price" : "title",
-				orderby: "_regular_price",
-				// orderby: "price",
+				// orderby: "_regular_price",
+				orderby: "title",
 				// meta_key: "_price",
 				order: sortOrder,
 				items_per_row: itemsPerRow,
@@ -66,8 +66,8 @@ registerBlockType("invizo-woo-products/products", {
 		}
 
 		const options = [
-			{ value: "asc", label: "Low to high" },
-			{ value: "desc", label: "High to low" },
+			{ value: "asc", label: "ASC" },
+			{ value: "desc", label: "DESC" },
 		];
 
 		const perRowOptions = [
