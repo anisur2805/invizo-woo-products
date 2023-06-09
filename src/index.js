@@ -30,28 +30,16 @@ registerBlockType("invizo-woo-products/products", {
 	edit: withSelect((select, props) => {
 		const { sortOrder, numProducts, itemsPerRow, sortType } = props.attributes;
 
-		// let order = sortOrder === "asc" ? "asc" : "desc";
-
-		// let orderby;
-		// if (sortType === "price") {
-		// 	orderby = "price";
-		// } else {
-		// 	orderby = "title";
-		// }
-
 		return {
 			products: select("core").getEntityRecords("postType", "product", {
 				per_page: numProducts,
-				// orderby: sortType === "price" ? "meta_value_num" : "title",
-				// orderby: sortType === "price" ? "price" : "title",
-				// orderby: "_regular_price",
 				orderby: "title",
-				// meta_key: "_price",
+				// orderby: "_regular_price",
+				// orderby: orderby,
 				order: sortOrder,
 				items_per_row: itemsPerRow,
 				_embed: true,
 				image: true,
-				// meta_key: sortType === "price" ? "_price" : undefined,
 			}),
 		};
 	})(({ products, attributes, setAttributes }) => {
