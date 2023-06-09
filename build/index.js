@@ -200,9 +200,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       products: select("core").getEntityRecords("postType", "product", {
         per_page: numProducts,
-        orderby: "title",
-        // orderby: "_regular_price",
-        // orderby: orderby,
+        orderby: "price",
+        // price is not a valid params
         order: sortOrder,
         items_per_row: itemsPerRow,
         _embed: true,
